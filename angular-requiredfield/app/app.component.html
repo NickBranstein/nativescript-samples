@@ -1,0 +1,8 @@
+<StackLayout class="p-20">
+    <Label text="Required Textfield" class="h1 text-center"></Label>
+    <TextField required hint="fill this out..." [(ngModel)]="textField" #element #elementModel="ngModel"></TextField>
+    <Label class="validation" [visibility]="elementModel.valid ? 'collapse' : 'visible'" text="Field is required" ></Label>
+    <Label [text]="element.className"></Label>
+    <Label [text]="elementModel.valid"></Label>
+    <Button [visibility]="elementModel.valid ? 'visible' : 'collapse'" text="Save" class="btn btn-primary"></Button>
+</StackLayout>
